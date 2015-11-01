@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Valutazioni</title>
+        <style>
+            @font-face {
+                font-family: Roboto;
+                src: url(Roboto-Regular.ttf);
+            }
+            * {
+                margin: 0;
+                font-family: Roboto;
+            }
+            .contenuto {
+                margin: 20px auto;
+                width: 60%;
+                border:3px solid #8AC007;
+                padding: 10px;
+            }
+            .contenuto h1 {
+                text-align: center;
+            }
+            .contenuto table {
+                margin: 0 auto;
+            }
+            .contenuto table, td, th {
+                border: 1px solid green;
+                text-align: center;
+            }
+            .contenuto th {
+                background-color: green;
+                color: #FFF;
+                height: 20px;
+            }
+            .contenuto input[type="text"] {
+                width: 170px;
+                height: 30px;
+                font-size: 14px;
+                border: 1px solid #000;
+                text-align: center;
+            }
+            .contenuto #pulsanti {
+                display: block;
+                text-align: -webkit-center;
+                margin: 10px auto;
+            }
+            .contenuto #btnCalcola {
+                width: 100px;
+                display: inline-block;
+                text-align: -webkit-center;
+                margin: 10px auto;
+            }
+            .contenuto #btnReset {
+                width: 100px;
+                display: inline-block;
+                text-align: -webkit-center;
+                margin: 10px auto;
+            }
+            #copyright {
+                font-size: 12px;
+            }
+        </style>
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <div class="contenuto" id="box">
+            <h1>Calcolo media</h1>
+            <div style="padding-bottom: 20px;"></div>
+            <form>
+                <table id="materie_voto">
+                    <tr>
+                        <th>Materia</th><th>Valutazione</th>
+                    </tr>
+                    <tr>
+                        <td>T.P.S.</td><td><input onkeyup="controllaVoto('voto_tps');" type="text" id="voto_tps" placeholder="Inserisci qui la valutazione"></td>
+                    </tr>
+                    <tr>
+                        <td>Sistemi e Reti</td><td><input onkeyup="controllaVoto('voto_sistemi');" type="text" id="voto_sistemi" placeholder="Inserisci qui la valutazione"></td>
+                    </tr>
+                    <tr>
+                        <td>Informatica</td><td><input onkeyup="controllaVoto('voto_info');" type="text" id="voto_info" placeholder="Inserisci qui la valutazione"></td>
+                    </tr>
+                    <tr>
+                        <td>Gestione d'Impresa</td><td><input onkeyup="controllaVoto('voto_gestione');" type="text" id="voto_gestione" placeholder="Inserisci qui la valutazione"></td>
+                    </tr>
+                    <tr>
+                        <td>Matematica</td><td><input onkeyup="controllaVoto('voto_matematica');" type="text" id="voto_matematica" placeholder="Inserisci qui la valutazione"></td>
+                    </tr>
+                    <tr>
+                        <td>Inglese</td><td><input onkeyup="controllaVoto('voto_inglese');" type="text" id="voto_inglese" placeholder="Inserisci qui la valutazione"></td>
+                    </tr>
+                    <tr>
+                        <td>Italiano</td><td><input onkeyup="controllaVoto('voto_italiano');" type="text" id="voto_italiano" placeholder="Inserisci qui la valutazione"></td>
+                    </tr>
+                    <tr>
+                        <td>Storia</td><td><input onkeyup="controllaVoto('voto_storia');" type="text" id="voto_storia" placeholder="Inserisci qui la valutazione"></td>
+                    </tr>
+                </table>
+                <div id="pulsanti">
+                    <input id="btnReset" type="reset" value="Ripulisci">
+                    <input id="btnCalcola" type="button" value="Calcola" onClick="calcolaMedia();">
+                </div>
+            </form>
+        </div>
+        <footer>
+            <p id="copyright" align="center">Copyright &copy; 2015 - <b>Matteo Raciti</b></p>
+        </footer>
+    </body>
+</html>
